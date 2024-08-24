@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\CalcWeb-ASP.NET-master",
+    "\\CalcWeb-ASP.NET-master\\CalcWeb",
+    "\\CalcWeb-ASP.NET-master\\CalcWeb\\.config",
+    "\\CalcWeb-ASP.NET-master\\CalcWeb\\Pages",
+    "\\CalcWeb-ASP.NET-master\\CalcWeb\\Pages\\Shared",
+    "\\CalcWeb-ASP.NET-master\\CalcWeb\\wwwroot",
+    "\\CalcWeb-ASP.NET-master\\CalcWeb\\wwwroot\\css",
+    "\\CalcWeb-ASP.NET-master\\CalcWeb\\wwwroot\\js",
+    "\\CalcWeb-ASP.NET-master\\CalcWeb\\wwwroot\\lib"
+  ],
+  "SelectedNode": "\\CalcWeb-ASP.NET-master\\CalcWeb\\Pages\\Index.cshtml",
+  "PreviewInSolutionExplorer": false
+}

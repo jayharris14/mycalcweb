@@ -1,0 +1,28 @@
+﻿@page
+@model CalcWeb.Pages.TipModel
+@{
+ ViewData["igreeting"] = "CalcWeb";
+}
+
+<h1>Tip</h1>
+
+<div style="position:relative; left:430px; top: -5px">
+    <p style="position:relative;"> @ViewData["errorm"] </p>
+    <form method="post">
+        Total:
+        <input style="width:120px" name="total" value="@Model.totalv" />$
+        <br />
+        <div style="position:relative; top:4px;">
+            Tip Percentage:&nbsp;<input style="width:48.5px; position:relative;" name="percent" value="@Model.percentv" />%
+        </div>
+        <div style="position:relative; top:10px; left:42px"><input type="Submit" style="width: 120px; border-radius: 5px; background-color: black; color: white; font-size:15px; font-weight: 600;" value="Calculate" /></div>
+        <div style="position:relative; top:15px; left:42px"><input type="Submit" id="clear" name="clear" style="width: 120px; border-radius: 5px; background-color: black; color: white; font-size: 15px; font-weight: 600;" value="Clear" /></div>
+    </form>
+    <p style="position:relative; top:25px;">@ViewData["Tip"] </p>
+</div>
+
+<div style="position: relative; top:-200px; left: 800px">
+    <h1 style="position: relative; font-weight: bold; left: -5px;">Instructions</h1>
+    <p>Enter total amount due</p>
+    <p>Enter percent to be tipped</p>
+</div>

@@ -1,0 +1,44 @@
+@page
+@model CalcWeb.Pages.ThebmiModel
+@{
+    ViewData["igreeting"] = "CalcWeb";
+}
+
+<h1>BMI</h1>
+
+
+<form method="post">
+    <p style="position:relative;"> @ViewData["errorm"] </p>
+    Weight:<input style="width:140px" name="weight" value="@Model.weightv" id="lbs."/>@ViewData["wu"]<div style="height: 40px;" class="dropdown"><button style="position: absolute; background-color: green; border-radius:3px; height: 17px; width: 15px; margin-top: 18px; margin-left: -73px;" onclick="myFunction()" class="dropbtn"><div class="triangle" style="width: 0; margin-top: -8px; margin-left: -12px; border-left: 12px solid transparent; border-right: 12px solid transparent; border-radius: 5px; border-top: 17px solid white;"></div></button>
+        <div style="position: absolute; width: 30px; top: 50px; left: -74px;" id="myDropdown" class="dropdown-content">
+            <input style="position: absolute; width: 34px;" type="submit" id="unit" name="unit" value=@ViewData["u"]></input>
+        </div>
+    </div>
+    <br />
+    <div style="position:relative; top:14px;">
+        Height:&nbsp;<input style="width: @ViewData["inputwidth"]; position:relative;" name="ih" value="@Model.ih" />@ViewData["ih"]
+        <input @ViewData["hidden"] style="width:60px" name="oh" id="oh" value="@Model.oh" runat="server" />@ViewData["oh"] <div style="height: 40px;" class="dropdown">
+            <button style="position: absolute; background-color: green; border-radius:3px; height: 17px; width: 15px; margin-top: 18px; margin-left: -70px;" onclick="myFunction()" class="dropbtn"><div class="triangle" style="width: 0; margin-top: -8px; margin-left: -12px; border-left: 12px solid transparent; border-right: 12px solid transparent; border-radius: 5px; border-top: 17px solid white;"></div></button>
+            <div style="position: absolute; width: 30px; top: 50px; left: -74px;" id="myDropdown" class="dropdown-content">
+                <input style="position: absolute; left:2.4px; width: 34px" type="submit" id="hu1 "name="hu1" value=@ViewData["hu1"]></input>
+                <input style="position: absolute; left:2.4px; top: 30px; width: 34px;" type="submit" id="hu2" name="hu2" value=@ViewData["hu2"]></input>
+            </div>
+        </div>
+    </div>
+    <div style="position:relative; top:27px; left:55px"><input type="Submit" style="width: 140px; background-color: black; border-radius: 3px;  color: white; font-size:15px; font-weight: 600;" value="Calculate" /></div>
+    <div style="position:relative; top:32px; left:55px"><input type="Submit" style="width: 140px; background-color: black; border-radius: 3px; color: white; font-size: 15px; font-weight: 600;" value="Clear" /></div>
+</form>
+<p style="position:relative; top:40px;">@ViewData["BMI"] </p>
+<div style="position: relative; left: 420px; top: 0px; ">
+    <h1 style="position: relative; left: -2px; font-weight: bold;">Instructions</h1>
+    <p>Enter weight in pounds of kilograms</p>
+    <p>Enter height in feet and inches, meters, <br /> or centimeters</p>
+</div>
+<div style="position: relative; top:-365px; left:830px">
+    <p style="font-size: 16.5px; font-weight: bold; color: black; position: relative; left: -5px;">Body Mass Index Categories</p>
+    <div style="width: 219px; height: 35px; margin-bottom:0px; position:relative;  background-color:mediumpurple"><p style="position:relative; border-radius: 3px 3px; color: white; font-size:500; top:6px; left:30px;">Underweight &lt 18.5</p></div>
+    <div style="width: 219px; height: 35px; margin-bottom:0px; position:relative;  background-color:violet"><p style="position: relative; color: white; font-size: 500; top: 6px; left: 30px; ">Healthy 18.5-24.9</p></div>
+    <div style="width: 219px; height: 35px; margin-bottom:0px; position:relative;  background-color:darkviolet"><p style="position: relative; color: white; font-size: 500; top: 6px; left: 30px; ">Overweight 25-29.9</p></div>
+    <div style="width: 219px; height: 35px; margin-bottom:0px; position:relative;  background-color:mediumpurple"><p style="position: relative; color: white; font-size: 500; top: 6px; left: 30px; ">Obesity 30-34.9</p></div>
+    <div style="width: 219px; height: 35px; margin-bottom:0px; position:relative;  background-color:violet"><p style="position: relative; color: white; font-size: 500; top: 6px; left: 30px; ">Severe Obesity 35 &gt </p></div>
+</div>
